@@ -1,17 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import CotacaoDolar from './src/components/dolar';
-import CotacaoEuro from './src/components/euro';
-import CotacaoIene from './src/components/iene';
+import { StyleSheet, Text, View , } from 'react-native';
+import Viewer from './components/Viewer'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>ADolarS</Text>
       <Text style={styles.texto}>Valor do Real em outro Lugares:</Text>
-      <CotacaoDolar/>
-      <CotacaoEuro/>
-      <CotacaoIene/>
+      <Viewer title="EUA(dolar)"type="USD-BRL"/>
+      <Viewer title="Europa(euro)"type="EUR-BRL"/>
+      <Viewer title="Japão(Iene)"type="JPY-BRL"/>
+      
     </View>
   );
 }
